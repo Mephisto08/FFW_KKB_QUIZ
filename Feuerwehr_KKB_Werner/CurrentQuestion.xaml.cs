@@ -19,9 +19,9 @@ public partial class CurrentQuestion : Page
         this.currentQuestionSession = aQ;
         getAllQuestionsFromCategory();
         Question_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].question;
-        Answer1_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].answer1;
-        Answer2_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].answer2;
-        Answer3_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].answer3;
+        Answer1_TextBlock.Text = "a)   " + currentQuestionsFromCategory[indexQuestionList].answer1;
+        Answer2_TextBlock.Text = "b)   " + currentQuestionsFromCategory[indexQuestionList].answer2;
+        Answer3_TextBlock.Text = "c)   " + currentQuestionsFromCategory[indexQuestionList].answer3;
     }
     
     private void goToQuiz(object sender, RoutedEventArgs e)
@@ -46,7 +46,7 @@ public partial class CurrentQuestion : Page
             QuestionBackground_Border.Background = new SolidColorBrush(Color.FromArgb(127, 255, 0, 0));
             QuestionBackground_Border.Opacity = 0.3;
         }
-        switch (selectedAnswer)
+        switch (currentQuestion.correctAnswer)
         {
             case 0:
                 Answer1_TextBlock.Background = new SolidColorBrush(Color.FromArgb(127, 0, 255, 0));
@@ -96,9 +96,9 @@ public partial class CurrentQuestion : Page
             
             // update content from page
             Question_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].question;
-            Answer1_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].answer1;
-            Answer2_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].answer2;
-            Answer3_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].answer3;
+            Answer1_TextBlock.Text = "a)   " + currentQuestionsFromCategory[indexQuestionList].answer1;
+            Answer2_TextBlock.Text = "b)   " +currentQuestionsFromCategory[indexQuestionList].answer2;
+            Answer3_TextBlock.Text = "c)   " + currentQuestionsFromCategory[indexQuestionList].answer3;
             
             // update Button
             CheckAnswer_Button.Content = "Prüfen!";

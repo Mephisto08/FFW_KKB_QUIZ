@@ -23,10 +23,7 @@ public partial class Uebersicht : Page
     // 
     private void goToAddQuestion(object sender, RoutedEventArgs e)
     {
-        //NavigationService.Navigate(new Quiz());
-        string content = "WIP";
-        if (content != null)
-            MessageBox.Show(content);
+        NavigationService.Navigate(new AddQuestion());
     }
     
     //

@@ -38,6 +38,8 @@
                 </Style>
             </Button.Resources>
         </Button>
+        
+        <!-- Background Rectangle -->
         <Border 
             x:Name="QuestionBackground_Border"
             Width="490" 
@@ -77,7 +79,7 @@
                     FontFamily="Arial"
                     MaxWidth="450"
                     TextWrapping="Wrap"
-                    TextAlignment="Center"
+                    TextAlignment="Left"
                     PreviewMouseLeftButtonUp="onClick_Answer1"
                     Text="">  
             </TextBlock>
@@ -90,7 +92,7 @@
                     FontFamily="Arial"
                     MaxWidth="450"
                     TextWrapping="Wrap"
-                    TextAlignment="Center"
+                    TextAlignment="Left"
                     PreviewMouseLeftButtonUp="onClick_Answer2"
                     Text="">  
                 </TextBlock> 
@@ -103,7 +105,7 @@
                     FontFamily="Arial"
                     MaxWidth="450"
                     TextWrapping="Wrap"
-                    TextAlignment="Center"
+                    TextAlignment="Left"
                     PreviewMouseLeftButtonUp="onClick_Answer3"
                     Text="">  
                 </TextBlock>
