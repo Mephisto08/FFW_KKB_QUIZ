@@ -44,6 +44,7 @@
                 Width="200"
                 Height="100" 
                 FontSize="18" 
+                Click="goToAddQuestion"
             >
                 <!-- Set Button backgroundcolor -->
                 <Button.Background>
@@ -67,6 +68,7 @@
                 Height="100" 
                 FontSize="18" 
                 FontFamily="Arial"
+                Click="goToExportQuiz"
             >
                 <!-- Set Button backgroundcolor -->
                 <Button.Background>
