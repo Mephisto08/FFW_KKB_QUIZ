@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,7 @@ namespace Feuerwehr_KKB_Werner
     {
         public MainWindow()
         {
-            
             InitializeComponent();
-            this.MinWidth = 1024;
-            this.MinHeight = 600;
         }
 
         

@@ -5,19 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Feuerwehr_KKB_Werner"
       mc:Ignorable="d"
-      Title="Quiz" Height="450" Width="800">
+      Width="700"
+      Height="700"
+      Title="Quiz"
+>
     <Grid>
+        <!-- Define background -->
+        <Grid.Background>  
+            <ImageBrush ImageSource="Resources/images/retten-loeschen-bergen-schuetzen.png" Stretch="UniformToFill"/>     
+        </Grid.Background>
         <Button
-            
-            x:Name="Add_Question_Button"
-            Margin="0,50,0,0"
-            Width="200"
-            Height="100" 
-            FontSize="18" 
+            x:Name="GoToUebersicht_Button"
+            Content="Zurück"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Width="60"
+            Height="40" 
+            FontSize="12" 
             FontFamily="Arial"
             Click="goToUebersicht"
-            Background="Firebrick" 
-        />
-            
+        >
+            <!-- Set Button backgroundcolor -->
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Firebrick" Offset="0.0" />
+                    <GradientStop Color="Gray" Offset="1.0" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <!-- Rounded Corners -->
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <ComboBox 
+            Name="cmbColors"
+            Height="20" 
+            Width="100" 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,50,0,0"> 
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding }" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        
     </Grid>
 </Page>

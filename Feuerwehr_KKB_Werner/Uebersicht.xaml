@@ -5,25 +5,37 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Feuerwehr_KKB_Werner"
       mc:Ignorable="d"
-      Title="Uebersicht" Height="450" Width="800">
+      Title="Uebersicht"
+      Margin="0,0,0,0"
+>
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <!-- Define background -->
+        <Grid.Background>  
+            <ImageBrush ImageSource="Resources/images/retten-loeschen-bergen-schuetzen.png" Stretch="UniformToFill"/>     
+        </Grid.Background>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
             <Button
-                Content="Go to Page 2"
-                x:Name="Start_Quiz_Button"
+                Content="Quiz"
+                x:Name="Quiz_Button"
                 Width="200"
                 Height="100" 
                 FontSize="18" 
                 FontFamily="Arial"
-                Click="Button_Click"
+                Click="goToQuiz"
             >
+                <!-- Set Button backgroundcolor -->
                 <Button.Background>
                     <LinearGradientBrush>
-                        <GradientStop Color="Red" Offset="0.0" />
-                        <GradientStop Color="White" Offset="1.0" />
+                        <GradientStop Color="Firebrick" Offset="0.0" />
+                        <GradientStop Color="Gray" Offset="1.0" />
                     </LinearGradientBrush>
                 </Button.Background>
+                <!-- Rounded Corners -->
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
             </Button>
             <Button
                 Content="Fragen hinzufügen"
@@ -32,9 +44,21 @@
                 Width="200"
                 Height="100" 
                 FontSize="18" 
-                FontFamily="Arial"
-                Background="Firebrick" 
-            />
+            >
+                <!-- Set Button backgroundcolor -->
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Firebrick" Offset="0.0" />
+                        <GradientStop Color="Gray" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+                <!-- Rounded Corners -->
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <Button
                 Content="Prüfung exportieren"
                 x:Name="Export_Exam_Button"
@@ -43,8 +67,21 @@
                 Height="100" 
                 FontSize="18" 
                 FontFamily="Arial"
-                Background="Firebrick" 
-            />
+            >
+                <!-- Set Button backgroundcolor -->
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Firebrick" Offset="0.0" />
+                        <GradientStop Color="Gray" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+                <!-- Rounded Corners -->
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

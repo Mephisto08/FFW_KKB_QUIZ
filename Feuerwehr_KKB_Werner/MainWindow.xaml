@@ -6,17 +6,17 @@
                    xmlns:local="clr-namespace:Feuerwehr_KKB_Werner"
                    mc:Ignorable="d"
                    Title="Feuerwehr Klein-krotzenburg Quiz"
-                   Width="1024"
-                   Height="600"
+                   Width="700"
+                   Height="700"
                    ResizeMode="NoResize"
                    WindowStartupLocation="CenterScreen"
                    Source="Uebersicht.xaml"
                    Background="{DynamicResource WindowBrush}"
-                   
+                   ShowsNavigationUI="False"
 >
-    
+    <!-- ShowsNavigationUI="False" -->
     <Window.Resources>
-        <SolidColorBrush x:Key="WindowBrush" Color="Gray"/>
+        <SolidColorBrush x:Key="WindowBrush" Color="#bfbfbf"/>
     </Window.Resources>
     
 </NavigationWindow>

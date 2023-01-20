@@ -10,7 +10,7 @@ public partial class Uebersicht : Page
     {
         InitializeComponent();
     }
-    private void Button_Click(object sender, RoutedEventArgs e)
+    private void goToQuiz(object sender, RoutedEventArgs e)
     {
         NavigationService.Navigate(new Quiz());
     }
