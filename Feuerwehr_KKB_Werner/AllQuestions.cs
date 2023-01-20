@@ -12,7 +12,6 @@ public class AllQuestions
 
     public List<Question> questions { get; set; } = new List<Question>();
     public HashSet<string> allCategorys{ get; set; } = new HashSet<string>();
-
     public string currentCategory { get; set; } = "";
     public AllQuestions()
     {

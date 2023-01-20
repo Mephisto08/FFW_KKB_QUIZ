@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows;
 
@@ -15,24 +16,21 @@ public partial class Quiz : Page
         InitializeComponent();
         this.currentQuestionSession = aQ;
         cmbCategory.ItemsSource = this.currentQuestionSession.allCategorys;
-
-
-
-        cmbCategory.SelectedItem = this.currentQuestionSession.currentCategory;
+        cmbCategory.SelectedItem = this.currentQuestionSession.allCategorys.ElementAt(0);
+        this.currentQuestionSession.currentCategory = this.currentQuestionSession.allCategorys.ElementAt(0);
         
         
     }
     private void goToUebersicht(object sender, RoutedEventArgs e)
     {
-        //NavigationService.GoBack();
-        this.NavigationService.Navigate(new Uri($"Uebersicht.xaml", UriKind.Relative));
+        NavigationService.GoBack();
     }
     
     private void goToStartQuiz(object sender, RoutedEventArgs e)
     {
         if (this.currentQuestionSession.currentCategory != "")
         {
-            NavigationService.Navigate(new AddQuestion(this.currentQuestionSession));
+            NavigationService.Navigate(new CurrentQuestion(this.currentQuestionSession));
         }
         else
         {
