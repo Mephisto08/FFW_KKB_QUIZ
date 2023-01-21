@@ -63,7 +63,8 @@
             Text="Frage:">
         </TextBlock>
         <TextBox
-            x:Name="AddQuestion_TextBlock"
+            x:Name="AddQuestion_TextBox"
+            TextChanged="onChange_AddQuestion"
             Margin="220,115,0,0"
             FontSize="18"
             FontFamily="Arial"
@@ -84,6 +85,8 @@
         
         <!-- Answer 1 -->
         <TextBlock
+            x:Name="AddAnswer1_TextBlock"
+            PreviewMouseLeftButtonUp="onClick_AddAnswer1"
             Margin="120,195,0,0"
             FontSize="18"
             FontFamily="Arial"
@@ -95,7 +98,8 @@
             Text="Antwort a:">
         </TextBlock>
         <TextBox
-            x:Name="AddAnswer1_TextBlock"
+            x:Name="AddAnswer1_TextBox"
+            TextChanged="onChange_AddAnswer1"
             Margin="220,180,0,0"
             FontSize="18"
             FontFamily="Arial"
@@ -115,6 +119,8 @@
         
         <!-- Answer 2 -->
         <TextBlock
+            x:Name="AddAnswer2_TextBlock"
+            PreviewMouseLeftButtonUp="onClick_AddAnswer2"
             Margin="120,265,0,0"
             FontSize="18"
             FontFamily="Arial"
@@ -126,7 +132,8 @@
             Text="Antwort b:">
         </TextBlock>
         <TextBox
-            x:Name="AddAnswer2_TextBlock"
+            x:Name="AddAnswer2_TextBox"
+            TextChanged="onChange_AddAnswer2"
             Margin="220,250,0,0"
             FontSize="18"
             FontFamily="Arial"
@@ -145,6 +152,8 @@
 
         <!-- Answer 3 -->
         <TextBlock
+            x:Name="AddAnswer3_TextBlock"
+            PreviewMouseLeftButtonUp="onClick_AddAnswer3"
             Margin="120,335,0,0"
             FontSize="18"
             FontFamily="Arial"
@@ -156,8 +165,43 @@
             Text="Antwort c:">
         </TextBlock>
         <TextBox
-            x:Name="AddAnswer3_TextBlock"
+            x:Name="AddAnswer3_TextBox"
+            TextChanged="onChange_AddAnswer3"
             Margin="220,320,0,0"
+            FontSize="18"
+            FontFamily="Arial"
+            MinWidth="330"
+            MaxWidth="330"
+            MinHeight="50"
+            MaxHeight="50"
+            TextWrapping="Wrap"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Top"
+            HorizontalContentAlignment="Left"
+            VerticalScrollBarVisibility="Visible"
+            Text="">
+        </TextBox>
+        
+        
+        
+        <!-- Kategorie  -->
+        <TextBlock
+            x:Name="AddCategory_TextBlock"
+            Margin="120,405,0,0"
+            FontSize="18"
+            FontFamily="Arial"
+            FontWeight="Bold"
+            FontStyle="Italic"
+            MaxWidth="100"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Kategorie:">
+        </TextBlock>
+        <TextBox
+            x:Name="AddCategory_TextBox"
+            TextChanged="onChange_AddCategory"
+            Margin="220,390,0,0"
             FontSize="18"
             FontFamily="Arial"
             MinWidth="330"
@@ -179,6 +223,7 @@
         <Button
             x:Name="CheckAnswer_Button"
             Content="Frage Hinzufügen"
+            Click="onClick_SafeQuestion"
             Margin="320,400,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"

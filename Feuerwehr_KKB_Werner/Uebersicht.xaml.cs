@@ -23,7 +23,7 @@ public partial class Uebersicht : Page
     // 
     private void goToAddQuestion(object sender, RoutedEventArgs e)
     {
-        NavigationService.Navigate(new AddQuestion());
+        NavigationService.Navigate(new AddQuestion(this.currentQuestionSession));
     }
     
     //

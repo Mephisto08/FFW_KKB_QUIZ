@@ -7,6 +7,8 @@ namespace Feuerwehr_KKB_Werner;
 
 public class Question
 {
+    // if files are swapped, keys can be the same. key is not identifying
+    // TODO: Delete key from json file and make question as identifying key
     public string key { get; set; }
     public string question { get; set; }
     public string category { get; set; }
@@ -16,8 +18,9 @@ public class Question
     public int correctAnswer { get; set; }
 
 
-    public Question(string q, string c, string a1, string a2, string a3, int ca)
+    public Question(string k, string q, string c, string a1, string a2, string a3, int ca)
     {
+        this.key = k;
         this.question = q;
         this.category = c;
         this.answer1 = a1;
