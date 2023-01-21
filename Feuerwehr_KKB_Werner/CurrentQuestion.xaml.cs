@@ -85,26 +85,39 @@ public partial class CurrentQuestion : Page
             // update Index of Question
             indexQuestionList += 1;
             
-            // disable background for answers
-            Answer1_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
-            Answer2_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
-            Answer3_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
+            // check if all question from category have been answered
+            if (indexQuestionList == this.currentQuestionsFromCategory.Count)
+            {
+
+                MessageBox.Show(
+                    "Alle Fragen der ausgewählten Kategorie wurden beantwortet.\nDu kehrst nun zur Kategorie auswahl zurück.",
+                    "Geschafft!");
+                NavigationService.GoBack();
+            } 
+            else{
+                // disable background for answers
+                Answer1_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
+                Answer2_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
+                Answer3_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
             
-            // reset background
-            QuestionBackground_Border.Background = new SolidColorBrush(Color.FromRgb(166, 166, 166));
-            QuestionBackground_Border.Opacity = 0.8;
+                // reset background
+                QuestionBackground_Border.Background = new SolidColorBrush(Color.FromRgb(166, 166, 166));
+                QuestionBackground_Border.Opacity = 0.8;
             
-            // update content from page
-            Question_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].question;
-            Answer1_TextBlock.Text = "a)   " + currentQuestionsFromCategory[indexQuestionList].answer1;
-            Answer2_TextBlock.Text = "b)   " +currentQuestionsFromCategory[indexQuestionList].answer2;
-            Answer3_TextBlock.Text = "c)   " + currentQuestionsFromCategory[indexQuestionList].answer3;
+                // update content from page
+                Question_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].question;
+                Answer1_TextBlock.Text = "a)   " + currentQuestionsFromCategory[indexQuestionList].answer1;
+                Answer2_TextBlock.Text = "b)   " +currentQuestionsFromCategory[indexQuestionList].answer2;
+                Answer3_TextBlock.Text = "c)   " + currentQuestionsFromCategory[indexQuestionList].answer3;
             
-            // update Button
-            CheckAnswer_Button.Content = "Prüfen!";
+                // update Button
+                CheckAnswer_Button.Content = "Prüfen!";
             
-            // reset currenAnswer
-            selectedAnswer = -1;
+                // reset currenAnswer
+                selectedAnswer = -1;
+            }
+            
+            
         }
 
     }

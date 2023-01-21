@@ -49,6 +49,7 @@ public partial class AddQuestion : Page
             //write string to file
             System.IO.File.WriteAllText(@"./Resources/questions/AlleFragen.json", json);
             
+            MessageBox.Show("Frage wurde erfolgreich hinzugefügt!", "Yippie", MessageBoxButton.OK, MessageBoxImage.Information);
             
             // after safed question clear all textboxes
             AddQuestion_TextBox.Text = "";
@@ -61,15 +62,13 @@ public partial class AddQuestion : Page
             AddAnswer1_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
             AddAnswer2_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
             AddAnswer3_TextBlock.Background = new SolidColorBrush(Colors.Transparent);
-
         }
         else{
-            MessageBox.Show("Bitte fülle alle Felder aus!");
+            MessageBox.Show("Bitte fülle alle Felder aus!", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
         }
         
 
     }
-    
     
     private void onClick_AddAnswer1(object sender, MouseButtonEventArgs e)
     {

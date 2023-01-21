@@ -30,8 +30,8 @@ public partial class Uebersicht : Page
     private void goToExportQuiz(object sender, RoutedEventArgs e)
     {
         //NavigationService.Navigate(new Quiz());
-        string content = "WIP";
+        string content = "Dieses Feature befindet sich noch in der Entwicklungsphase!\nWir informieren dich, sobald diese Funktionalität bereit steht.";
         if (content != null)
-            MessageBox.Show(content);
+            MessageBox.Show(content, "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
     }
 }

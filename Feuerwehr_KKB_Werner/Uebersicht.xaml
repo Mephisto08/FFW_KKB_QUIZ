@@ -61,7 +61,7 @@
                 </Button.Resources>
             </Button>
             <Button
-                Content="Prüfung exportieren"
+                Content="Exportortiere Fragen/ Lösche Fragen"
                 x:Name="Export_Exam_Button"
                 Margin="0,50,0,0"
                 Width="200"
