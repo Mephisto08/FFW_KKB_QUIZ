@@ -10,7 +10,7 @@
     <Grid>
         <!-- Define background -->
         <Grid.Background>  
-            <ImageBrush ImageSource="Resources/images/retten-loeschen-bergen-schuetzen.png" Stretch="UniformToFill"/>     
+            <ImageBrush Stretch="Uniform" ImageSource="Resources/images/retten-loeschen-bergen-schuetzen.png" />     
         </Grid.Background>
         <Button
             x:Name="GoToUebersicht_Button"

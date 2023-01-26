@@ -9,7 +9,7 @@
     <Grid>
         <!-- Define background -->
         <Grid.Background>
-            <ImageBrush ImageSource="Resources/images/retten-loeschen-bergen-schuetzen.png" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="Resources/images/retten-loeschen-bergen-schuetzen.png" Stretch="Uniform" />
         </Grid.Background>
         <Button
             x:Name="GoToUebersicht_Button"
@@ -80,7 +80,7 @@
             VerticalContentAlignment="Top"
             HorizontalContentAlignment="Left"
             VerticalScrollBarVisibility="Visible"
-            Text="asdf">
+            Text="">
         </TextBox> 
         
         <!-- Answer 1 -->
@@ -214,7 +214,7 @@
             VerticalContentAlignment="Top"
             HorizontalContentAlignment="Left"
             VerticalScrollBarVisibility="Visible"
-            Text="">
+            Text="Kleinlöschgeräte">
         </TextBox>
 
         

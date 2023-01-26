@@ -17,6 +17,8 @@
 
     <ItemGroup>
       <Resource Include="Resources\images\retten-loeschen-bergen-schuetzen.png" />
+      <None Remove="Resources\images\FFKKB Wappen ALT.tif" />
+      <Resource Include="Resources\images\FFKKB Wappen ALT.tif" />
     </ItemGroup>
 
     <ItemGroup>

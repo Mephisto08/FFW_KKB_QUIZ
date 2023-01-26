@@ -56,7 +56,7 @@ public partial class AddQuestion : Page
             AddAnswer1_TextBox.Text = "";
             AddAnswer2_TextBox.Text = "";
             AddAnswer3_TextBox.Text = "";
-            AddCategory_TextBox.Text = "";
+            AddCategory_TextBox.Text = "Kleinlöschgeräte";
             
             // disable background for all answers
             AddAnswer1_TextBlock.Background = new SolidColorBrush(Colors.Transparent);

@@ -18,7 +18,7 @@ public partial class CurrentQuestion : Page
         InitializeComponent();
         this.currentQuestionSession = aQ;
         getAllQuestionsFromCategory();
-        Question_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].question;
+        Question_TextBlock.Text = (indexQuestionList+1) + ". " + currentQuestionsFromCategory[indexQuestionList].question;
         Answer1_TextBlock.Text = "a)   " + currentQuestionsFromCategory[indexQuestionList].answer1;
         Answer2_TextBlock.Text = "b)   " + currentQuestionsFromCategory[indexQuestionList].answer2;
         Answer3_TextBlock.Text = "c)   " + currentQuestionsFromCategory[indexQuestionList].answer3;
@@ -90,7 +90,7 @@ public partial class CurrentQuestion : Page
             {
 
                 MessageBox.Show(
-                    "Alle Fragen der ausgewählten Kategorie wurden beantwortet.\nDu kehrst nun zur Kategorie auswahl zurück.",
+                    "Alle Fragen der ausgewählten Kategorie wurden beantwortet.\nDu kehrst nun zur Kategorieauswahl zurück.",
                     "Geschafft!");
                 NavigationService.GoBack();
             } 
@@ -105,7 +105,7 @@ public partial class CurrentQuestion : Page
                 QuestionBackground_Border.Opacity = 0.8;
             
                 // update content from page
-                Question_TextBlock.Text = currentQuestionsFromCategory[indexQuestionList].question;
+                Question_TextBlock.Text = (indexQuestionList+1) + ". " + currentQuestionsFromCategory[indexQuestionList].question;
                 Answer1_TextBlock.Text = "a)   " + currentQuestionsFromCategory[indexQuestionList].answer1;
                 Answer2_TextBlock.Text = "b)   " +currentQuestionsFromCategory[indexQuestionList].answer2;
                 Answer3_TextBlock.Text = "c)   " + currentQuestionsFromCategory[indexQuestionList].answer3;

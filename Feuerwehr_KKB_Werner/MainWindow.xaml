@@ -5,14 +5,16 @@
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                    xmlns:local="clr-namespace:Feuerwehr_KKB_Werner"
                    mc:Ignorable="d"
-                   Title="Feuerwehr Klein-krotzenburg Quiz"
+                   Title="Feuerwehr Quiz"
                    Width="700"
                    Height="700"
-                   ResizeMode="NoResize"
+                   ResizeMode="CanResize"
                    WindowStartupLocation="CenterScreen"
                    Source="Uebersicht.xaml"
                    Background="{DynamicResource WindowBrush}"
                    ShowsNavigationUI="False"
+                   Icon="../Resources/images/FFKKB Wappen ALT.tif"
+                   
 >
     <!-- ShowsNavigationUI="False" -->
     <Window.Resources>
